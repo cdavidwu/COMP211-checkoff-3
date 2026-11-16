@@ -1,0 +1,11 @@
+# Compiler warnings
+gcc -Wall -Wextra -g overflow.c -o /dev/null
+
+# GCC's built-in analyzer (GCC 10+)
+gcc -fanalyzer -g overflow.c -o /dev/null
+
+# cppcheck
+cppcheck --enable=all overflow.c
+
+# Clang's static analyzer
+clang --analyze overflow.c
